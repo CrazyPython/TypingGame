@@ -11,7 +11,15 @@ def get_words(text):
     for i in text:
         if len(i.split()) > 5:
         words.extend(i.split())
+def isin(txt):
+    global remove
+    for i in remove:
+        for j in txt:
+            if i in j:
+                return True
+    return False
 def clean_text(remove = [',','.','@','%','#','$','*','(',')','^']):
+    while isin(lines): 
     I = 0
     for i in lines:
         lines[I] = filter(lambda x: x not in remove,i)
