@@ -5,8 +5,6 @@ def striplist(l):
 def openit(name):
     f = open()
     return striplist(f.readlines())
-width,height = (640,480)
-screen = pygame.display.set_mode((width,height))
 def get_words(text):
     for i in text:
         if len(i.split()) > 5:
@@ -16,6 +14,10 @@ def clean_text(remove = [',','.','@','%','#','$','*','(',')','^']):
     for i in lines:
         lines[I] = filter(lambda x: x not in remove,i)
         I += 1
+def getrandom(file):
+    return random.choice(file)
+width,height = (640,480)
+screen = pygame.display.set_mode((width,height))
 class TypingGameWord(pygame.sprite.Sprite):
     def __init__(self, word):
         pygame.sprite.Sprite.__init__(self)
