@@ -197,7 +197,8 @@ wore
 wrong
 wrote
 young
-you'reagainst
+you're
+against
 agree
 airport
 alarm
@@ -1339,3 +1340,7 @@ phenomenon
 caricature
 surveillance
 metamorphosis
+negro
+statisfied
+this
+children
