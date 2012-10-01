@@ -8,6 +8,7 @@ screen = pygame.display.set_mode((width,height)) #sets up the window
 def spawn_word():
     global words
     wordStr = random.choice(words).strip()
+    words.remove(wordstr)#removes the used word
     return TypingGameWord(wordStr)
 
 class TypingGameWord(pygame.sprite.Sprite):
