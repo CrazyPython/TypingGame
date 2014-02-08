@@ -77,7 +77,7 @@ class SentenceGenerators:
     #Pastverb->hugged
     #Noun->speaker
     #Verb->washed
-    #Adjective->quickly
+    #Adjective->awesome
     #Adverb->tightly
     did = SentenceGen(["pronoun","pastverb","a_pronoun"]) #The orange hugged a man
     did_disc = SentenceGen(["pronoun","adverb","pastverb","a_pronoun"]) #The orange tightly hugged a man
