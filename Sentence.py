@@ -23,6 +23,12 @@ class Pronoun(Noun):
 class Verb(Word):
     def extend(self,adjective):
         self.etext = adjective.mtext+self.etext
+class ComplexVerb(Verb):
+    def __init__(self,pastverb,noun,adverb):
+        "all args are strings, ex:'hugged the orange tightly'"
+        self.innerwords=[PastVerb(pastverb),Noun(noun),Adjective(adverb)]
+        s = ' '.join([word.etext for word in self.innerwords])
+        Word.__init__(self,s)
 class PastVerb(Verb):
     def __init__(self,Initializer):
         "Initializer is either a string, or now verb. ("killed"->"killed")(Verbobj:awkwardly kill->"awkwardly killed")"
